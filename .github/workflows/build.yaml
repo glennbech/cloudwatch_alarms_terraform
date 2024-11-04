@@ -39,5 +39,5 @@ jobs:
       - name: Terraform Apply
         working-directory: infra
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -var="student_name=glenntest" -var="alarm_email=glenn.bech@gmail.com"  -no-color
+        run: terraform apply -var="student_name=glenntest" -var="alarm_email=glenn.bech@gmail.com" --auto-approve -no-color
         
